@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-import sys
-def getarg():
+def main():
+    pass
+
+if __name__=="__main__":
+    import sys
     nargs = len(sys.argv) - 1
     if (nargs == 0):
         print("{:d}: argument.".format(nargs))
@@ -12,6 +15,3 @@ def getarg():
         if (i == 0):
             continue
         print("{:d}: {:s}".format(i, sys.argv[i]))
-
-if __name__ == "__main__":
-    getarg()
