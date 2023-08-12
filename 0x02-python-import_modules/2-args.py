@@ -11,7 +11,5 @@ if __name__=="__main__":
         print("{:d} argument:".format(nargs))
     else:
         print("{:d} arguments:".format(nargs))
-        for i in range(len(sys.argv)):
-            if (i <= 1):
-                continue
-            print("{:d}: {:s}".format(i, sys.argv[i]))
+    for i in range(1, len(sys.argv)):
+        print("{:d}: {:s}".format(i, sys.argv[i]))
