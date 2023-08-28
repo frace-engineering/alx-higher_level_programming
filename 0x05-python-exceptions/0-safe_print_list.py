@@ -8,6 +8,6 @@ def safe_print_list(my_list=[], x=0):
                     print("{:d}".format(my_list[i]), end="")
                     num_of_elems += 1
             except IndexError:
-                break
+                continue
         print("")
     return (num_of_elems)
