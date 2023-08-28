@@ -6,8 +6,7 @@ def safe_print_list(my_list=[], x=0):
             try:
                 print("{:d}".format(my_list[i]), end="")
                 num_of_elems += 1
-            except:
-                x is not int
+            except TypeError:
                 break
         print("")
     return (num_of_elems)
