@@ -8,7 +8,7 @@ class Square:
     """ Define and initalise the square """
     def __init__(self, size=0):
         """ Initialize attributes """
-        sef.size = size
+        self.size = size
 
     @property
     def size(self):
@@ -26,4 +26,4 @@ class Square:
 
     def area(self):
         """ Return the area of the square """
-        return (self.__size * self.__size)
+        return (self.__size ** 2)
