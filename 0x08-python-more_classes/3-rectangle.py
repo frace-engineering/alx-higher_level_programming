@@ -44,16 +44,18 @@ class Rectangle:
 
     def perimeter(self):
         """ return the perimeter of the triangle """
-        if self.__width == 0 or self.__height == 0:
+        if (self.__width == 0) or (self.__height == 0):
             return 0
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
         """ Create a string object from the given objects """
         new_str = ""
-        if self.__width > 0 and self.__height > 0:
+        if (self.__width > 0) and (self.__height > 0):
             for s in range(self.__height):
                 for t in range(self.__width):
                     new_str += '#'
                 new_str += '\n'
+            return new_str
+        else:
             return new_str

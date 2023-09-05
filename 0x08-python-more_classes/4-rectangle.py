@@ -59,6 +59,8 @@ class Rectangle:
                     new_str += '#'
                 new_str += '\n'
             return new_str
+        else:
+            return new_str
 
     def __repr__(self):
         """ Create the string representation of the object """
