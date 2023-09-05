@@ -57,4 +57,3 @@ class Rectangle:
                     new_str += '#'
                 new_str += '\n'
             return new_str
-
