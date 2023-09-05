@@ -53,7 +53,7 @@ class Rectangle:
     def __str__(self):
         """ Create a string object from the given objects """
         new_str = ""
-        if self.__width > 0 and self.__height > 0:
+        if (self.__width > 0) and (self.__height > 0):
             for s in range(self.__height):
                 for t in range(self.__width):
                     new_str += '#'
