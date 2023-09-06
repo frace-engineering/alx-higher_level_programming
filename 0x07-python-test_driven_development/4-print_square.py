@@ -12,8 +12,6 @@ def print_square(size):
         raise ValueError("size must be >= 0")
     if size is None:
         raise TypeError("size must be an integer")
-    if size == 0:
-        return None
     if isinstance(size, float):
         raise TypeError("size must be an integer")
     for i in range(size):
