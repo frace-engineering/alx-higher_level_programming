@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-def magic_string():
-    my_str = "BestSchool"
+class magic_string:
+    def __init__(self, name):
+        self.name = "BestSchool"
 
+c = magic_string()
