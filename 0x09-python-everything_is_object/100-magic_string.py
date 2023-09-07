@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-class magic_string:
-    def __init__(self, name):
-        self.name = "BestSchool"
-
-c = magic_string()
+def magic_string(ret="BestSchool"):
+    for index, elem in enumerate(ret):
+        print("{:s}, ".format((ret + ", ") * index))
