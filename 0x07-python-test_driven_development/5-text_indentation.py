@@ -12,7 +12,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     flag = 0
     for ch in text:
-        if (ch == '.' or ch == '?' or ch ==':'):
+        if (ch == '.' or ch == '?' or ch == ':'):
             print(ch, end="")
             print("\n")
             flag = 1
@@ -25,4 +25,3 @@ def text_indentation(text):
                 else:
                     print(ch, end="")
                     flag = 0
-            
