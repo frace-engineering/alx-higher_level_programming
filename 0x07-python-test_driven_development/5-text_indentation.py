@@ -7,7 +7,7 @@ Function that prints a text and 2 new lines after each of ".,?:"
 def text_indentation(text):
     """Check if text is an empty string"""
     if text is None:
-        return None
+        raise TypeError("text must be a string")
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     flag = 0
