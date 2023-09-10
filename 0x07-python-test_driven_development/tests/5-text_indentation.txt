@@ -11,19 +11,17 @@ Usage:
 	Traceback (most recent call last):
 	TypeError: text must be a string
 	>>> text_indentation("Holberton.School")
-	Holderton.
+	Holberton.
 	<BLANKLINE>
 	School
-
-	>>> text_indentation("Holberton. School? How are you: John") #doctest: +ELLIPSIS
+    	>>> text_indentation("Holberton. School? How are you: John")
 	Holberton.
 	<BLANKLINE>
 	School?
 	<BLANKLINE>
 	How are you:
 	<BLANKLINE>
-	Jone
-
+	John
 	>>> text_indentation(12)
 	Traceback (most recent call last):
 	TypeError: text must be a string
