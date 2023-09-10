@@ -55,13 +55,11 @@ class Rectangle:
 
     def __str__(self):
         """ Create a string object from the given objects """
-        new_str = ""
+        if (self.__width == 0 or self.__height == 0):
+            return ""
         if self.__width > 0 and self.__height > 0:
-            for s in range(self.__height):
-                for t in range(self.__width):
-                    new_str += '#'
-                new_str += '\n'
-            return new_str
+            new_str = [str('#' * self.__width) for s in range(self.__height)]
+            return '\n'.join(new_str)
 
     def __repr__(self):
         """ Create the string representation of the object """
