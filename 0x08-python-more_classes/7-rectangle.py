@@ -56,22 +56,18 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """ Create a string object from the given objects """
-        new_str = ""
-        if (self.__width > 0) and (self.__height > 0):
-            for s in range(self.__height):
-                for t in range(self.__width):
-                    new_str += str(self.print_symbol)
-                new_str += '\n'
-            return new_str
+        """ Return a string rpresentation of the triangle """
         if (self.__width == 0) and (self.__height == 0):
             return ""
+        new_str = ([str(self.print_symbol * self.__width)
+                    for s in range(self.__height)])
+        return '\n'.join(new_str)
 
     def __repr__(self):
-        """ Create the string representation of the object """
-        return 'Rectangle({}, {})'.format(self.__height, self.__width)
+        """ Return the string representation of the triangle """
+        return f'Rectangle({self.__width}, {self.__height})'
 
     def __del__(self):
-        """ Print message when obj is deleted """
+        """ Print a message when an obj is deleted """
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
