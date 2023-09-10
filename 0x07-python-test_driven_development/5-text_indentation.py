@@ -21,9 +21,8 @@ def text_indentation(text):
             if (flag == 0):
                 print(ch, end="")
             else:
-                if (ch == ' ' or ch == '\t'):
+                if ((ch == ' ' or ch == '\t') and (text[-1] != " ")):
                     pass
                 else:
                     print(ch, end="")
                     flag = 0
-    print()
