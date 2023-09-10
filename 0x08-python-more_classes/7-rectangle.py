@@ -65,7 +65,7 @@ class Rectangle:
 
     def __repr__(self):
         """ Return the string representation of the triangle """
-        return f'Rectangle({self.__width}, {self.__height})'
+        return 'Rectangle({}, {})'.format(self._width, self.height)
 
     def __del__(self):
         """ Print a message when an obj is deleted """
