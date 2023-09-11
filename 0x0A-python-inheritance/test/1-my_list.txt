@@ -1,0 +1,16 @@
+The "print_sorted" module.
+--------------------------
+
+Import the module.
+
+	>>> print_sorted = __import__('1-my_list').print_sorted
+
+Usage:
+
+	>>> print_sorted[1, 3, 2, 5]
+	[1, 2, 3, 5]
+	print_sorted[a, 3, 5, 2]
+	Traceback (most recent call last):
+	TypeError: list items must be integers
+
+	
