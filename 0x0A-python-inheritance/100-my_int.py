@@ -12,6 +12,6 @@ class MyInt(int):
         return self.real != val
 
     def __ne__(self, val):
-        """operator iqual
+        """operator equal
         """
         return self.real == val
