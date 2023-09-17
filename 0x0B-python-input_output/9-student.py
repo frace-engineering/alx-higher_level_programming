@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Define a Student class"""
+import json
 
 
 class Student:
@@ -15,10 +16,4 @@ class Student:
                 "last_name": self.last_name,
                 "age": self.age
                 }
-        json_str = "{"
-        for key, value in student_dict.items():
-            if json_str != "{":
-                json_str += ", "
-            json_str += f'"{key}": "{value}"'
-        json_str += "}"
-        return json_str
+        return json.dumps(Student)
