@@ -91,7 +91,7 @@ class TestSquare_size(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(complex(5))
 
- def test_dict_size(self):
+    def test_dict_size(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square({"a": 1, "b": 2}, 2)
 
@@ -160,7 +160,7 @@ class TestSquare_x(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, "invalid")
 
- def test_float_x(self):
+    def test_float_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, 5.5)
 
@@ -196,7 +196,7 @@ class TestSquare_x(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, range(5))
 
- def test_bytes_x(self):
+    def test_bytes_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, b'Python')
 
@@ -264,7 +264,7 @@ class TestSquare_y(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 3, range(5))
 
- def test_bytes_y(self):
+    def test_bytes_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Square(1, 3, b'Python')
 
@@ -332,7 +332,7 @@ class TestSquare_stdout(unittest.TestCase):
     @staticmethod
     def capture_stdout(sq, method):
         """Captures and returns text printed to stdout.
- Args:
+        Args:
             sq (Square): The Square ot print to stdout.
             method (str): The method to run on sq.
         Returns:
@@ -367,7 +367,7 @@ class TestSquare_stdout(unittest.TestCase):
         s = Square(2, 88, 4, 19)
         self.assertEqual("[Square] (19) 88/4 - 2", str(s))
 
- def test_str_method_changed_attributes(self):
+    def test_str_method_changed_attributes(self):
         s = Square(7, 0, 0, [4])
         s.size = 15
         s.x = 8
@@ -402,7 +402,7 @@ class TestSquare_stdout(unittest.TestCase):
         display = "\n\n   ##\n   ##\n"
         self.assertEqual(display, capture.getvalue())
 
- def test_display_one_arg(self):
+    def test_display_one_arg(self):
         s = Square(3, 4, 5, 2)
         with self.assertRaises(TypeError):
             s.display(1)
@@ -435,7 +435,7 @@ class TestSquare_update_args(unittest.TestCase):
         s.update(89, 2, 3, 4)
         self.assertEqual("[Square] (89) 3/4 - 2", str(s))
 
-def test_update_args_more_than_four(self):
+    def test_update_args_more_than_four(self):
         s = Square(10, 10, 10, 10)
         s.update(89, 2, 3, 4, 5)
         self.assertEqual("[Square] (89) 3/4 - 2", str(s))
@@ -570,7 +570,7 @@ class TestSquare_update_kwargs(unittest.TestCase):
         s.update(y=3, x=15, size=2)
         self.assertEqual("[Square] (89) 15/3 - 2", str(s))
 
- def test_update_kwargs_invalid_size(self):
+    def test_update_kwargs_invalid_size(self):
         s = Square(10, 10, 10, 10)
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s.update(size="invalid")
@@ -605,7 +605,7 @@ class TestSquare_update_kwargs(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             s.update(y=-5)
 
-def test_update_args_and_kwargs(self):
+    def test_update_args_and_kwargs(self):
         s = Square(10, 10, 10, 10)
         s.update(89, 2, y=6)
         self.assertEqual("[Square] (89) 10/10 - 2", str(s))
