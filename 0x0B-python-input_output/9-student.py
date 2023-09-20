@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Define a Student class"""
-import json
 
 
 class Student:
@@ -12,8 +11,8 @@ class Student:
 
     def to_json(self):
         student_dict = {
-                "first_name": self.first_name,
-                "last_name": self.last_name,
-                "age": self.age
+                'first_name': self.first_name,
+                'last_name': self.last_name,
+                'age': self.age
                 }
-        return json.dumps(Student)
+        return student_dict
