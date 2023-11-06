@@ -2,5 +2,5 @@
 USE hbtn_0c_0
 SELECT state, MAX(value) max_temp
 FROM temperatures
-GROUP BY stae
+GROUP BY state
 ORDER BY state ASC
