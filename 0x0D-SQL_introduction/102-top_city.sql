@@ -2,6 +2,7 @@
 USE hbtn_0c_0
 SELECT city, AVG(value) avg_temp
 FROM temperatures
+WHERE month = 7 OR month = 8
 GROUP BY city
-WHERE month = July OR month = August
 ORDER BY avg_temp DESC
+LIMIT 3;
