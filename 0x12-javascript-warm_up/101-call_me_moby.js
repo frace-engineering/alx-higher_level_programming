@@ -1,9 +1,6 @@
 #!/usr/bin/node
 /* Execute theFunction() x times */
-module.exports = function(x, theFunction) {
-let i = 0;
-while (i < x) {
-    theFunction();
-    i++;
-  }
+exports.callMeMoby = function see(x, theFunction) {
+	for(let i = 0; i < x; i++)
+    		theFunction();
 }
