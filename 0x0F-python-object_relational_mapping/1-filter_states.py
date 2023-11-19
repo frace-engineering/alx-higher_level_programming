@@ -10,6 +10,6 @@ if __name__ == "__main__":
                          passwd=argv[2], db=argv[3])
     cus = db.cursor()
     cus.execute("SELECT * FROM states WHERE state.name LIKE 'N%' ORDER BY id ASC")
-    [print(state) for state in cus.fetchall()]
+    [print(state.name) for state.name in cus.fetchall()]
     cus.close()
     db.close()
