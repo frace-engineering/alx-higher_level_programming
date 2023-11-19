@@ -9,6 +9,9 @@
 if __name__ == "__main__":
     import MySQLdb
     from sys import argv
+    if len(argv) != 4:
+        print("Wrong Usage")
+        exit(1)
     """ Connect to the database in localhost on port 3306
         using a login user account.
     """
