@@ -12,6 +12,7 @@ DB_URL = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
 
 if __name__ == "__main__":
     engine = create_engine(DB_URL, pool_pre_ping=True)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
