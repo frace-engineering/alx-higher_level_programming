@@ -16,7 +16,9 @@ if __name__ == "__main__":
                          passwd=argv[2], db=argv[3])
     cus = db.cursor()
     """ Create the mysql query satement """
-    query = "SELECT cities.id, cities.name, states.name FROM cities RIGHT JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC"
+    query = "SELECT cities.id, cities.name, states.name FROM cities\
+            RIGHT JOIN states ON cities.state_id = states.id ORDER BY\
+            cities.id ASC"
     try:
         """ Execute the query with try keyword """
         cus.execute(query)
