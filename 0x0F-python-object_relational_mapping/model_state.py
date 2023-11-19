@@ -16,9 +16,3 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(238), nullable=False)
-
-
-if __name__ == "__main__":
-    engine = create_engine(DATABASE_URL, pool_pre_ping=True)
-
-    Base.metadata.create_all(engine)
