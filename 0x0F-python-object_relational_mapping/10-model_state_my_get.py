@@ -10,6 +10,8 @@ from model_state import State, Base
 
 
 if __name__ == "__main__":
+    if len(argv) != 5:
+        exit(1)
     DB_URL = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
     state_name = argv[4]
     engine = create_engine(DB_URL, pool_pre_ping=True)
@@ -21,4 +23,4 @@ if __name__ == "__main__":
     if result:
         print(f"{result.id}")
     else:
-        print("Not fount")
+        print("Not found")
