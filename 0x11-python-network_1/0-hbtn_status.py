@@ -4,11 +4,11 @@ import urllib.request
 
 
 if __name__ == "__main__":
-    """Run the script as the main """
-    request = urllib.request.Request('https://alx-intranet.hbtn.io/status')
-    with urllib.request.urlopen(request) as response:
+    """Use urllib to fetch the url """
+    url = 'https://alx-intranet.hbtn.io/status'
+    with urllib.request.urlopen(url) as response:
         html = response.read()
-        print('Body response:')
-        print('    - type: {}'.format(type(html)))
-        print('    - content: {}'.format(html))
-        print('    - utf8 content: {}'.format(html.decode('utf-8')))
+    print('Body response:')
+    print(f'\t- type: {type(html)}')
+    print(f'\t- content: {html}')
+    print(f'\t- utf8 content: {html.decode()}')
