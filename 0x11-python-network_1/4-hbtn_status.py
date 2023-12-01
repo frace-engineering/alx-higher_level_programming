@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Python script that feetches 
+""" Python script that feetches
     https://alx-intranet.hbtn.io/status
     """
 import requests
