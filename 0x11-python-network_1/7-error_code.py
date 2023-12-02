@@ -7,7 +7,7 @@ import requests
 import sys
 
 
-if __namae__ ==  "__main__":
+if __namae__ == "__main__":
     """ Request and raise exception as error occures """
     url = sys.argv[1]
     try:
