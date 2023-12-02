@@ -13,6 +13,6 @@ if __name__ == "__main__":
         res = requests.get(url)
         res.raise_for_status()
         print(res.text)
-    """ Raise HTTPRrror and print status code if >= 400 """    
+    """ Raise HTTPRrror and print status code if >= 400 """
     except requests.exceptions.RequestException as er:
         print(f'Error code: {res.status_code}')
