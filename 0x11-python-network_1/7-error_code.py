@@ -12,7 +12,7 @@ if __namae__ == "__main__":
     url = sys.argv[1]
     try:
         res = requests.get(url)
-        res.raise_for_status()
         print(res.text)
     except requests.exceptions.RequestException as er:
-        print(f'Error code: {res.status_code}')
+        if res.status_code >= 400:
+            print(f'Error code: {res.status_code}')
