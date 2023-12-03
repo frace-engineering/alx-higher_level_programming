@@ -8,12 +8,15 @@ import sys
 
 
 if __name__ == "__main__":
+    """ Take a url and post data to it,
+        retrieve the json representation of the id and name
+        """
     url = 'http://0.0.0.0:5000/search_user'
     if len(sys.argv) == 1:
         letter = ""
     else:
         letter = sys.argv[1]
-    post_data = {'q':letter}
+    post_data = {'q': letter}
     res = requests.post(url, data=post_data)
     try:
         response = res.json()
@@ -23,4 +26,3 @@ if __name__ == "__main__":
             print(f'[{response.get("id")}] {response.get("name")}')
     except ValueError:
         print('Not a valid JSON')
-  
