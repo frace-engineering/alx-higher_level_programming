@@ -5,4 +5,3 @@ class LockedClass:
             super().__setattr__(name, value)
         else:
             raise AttributeErroe("Cant create the class")
-    
