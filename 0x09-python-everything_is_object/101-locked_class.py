@@ -1,7 +1,15 @@
 #!/usr/bin/python3
 class LockedClass:
-    def __setattr__(self, name, value):
-        if name == 'first name':
-            super().__setattr__(name, value)
+    def __init__(self, name):
+        self._name = name
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name_setter(self, value):
+        if value != "first_name"
+            return
         else:
-            raise AttributeErroe("Cant create the class")
+            self._name = vlue
