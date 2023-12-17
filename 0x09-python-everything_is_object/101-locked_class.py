@@ -4,7 +4,7 @@
 
 class LockedClass:
     """ Initialize an instance with name = first_name """
-    def __init__(self, name="first_name"):
+    def __init__(self, name):
         self._name = name
 
     @property
