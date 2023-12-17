@@ -3,7 +3,8 @@
 
 
 class LockedClass:
-    def __init__(self, name):
+    """ Initialize an instance with name = first_name """
+    def __init__(self, name="first_name"):
         self._name = name
 
     @property
@@ -12,6 +13,7 @@ class LockedClass:
 
     @name.setter
     def name_setter(self, value):
+        """Conditionally crate an instance with name = first_name """
         if value == "first_name":
             self.name = value
         else:
